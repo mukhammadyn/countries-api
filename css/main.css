@@ -458,8 +458,138 @@ img {
   margin-right: 10px;
 }
 
+@media only screen and (max-width: 470px) {
+  .site-header__heading {
+    font-size: 20px;
+    line-height: 1;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .site-header__heading {
+    font-size: 18px;
+    line-height: 1;
+  }
+  .site-header__mode-btn {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .site-header__heading {
+    font-size: 16px;
+    line-height: 1;
+  }
+  .site-header__mode-btn-txt {
+    display: none;
+  }
+}
+
 .site-main {
   padding-top: 48px;
+}
+
+.site-hero__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -75px;
+  margin-bottom: -45px;
+}
+
+.site-hero__item {
+  width: calc(100%/4 - 75px);
+  margin-left: 75px;
+  margin-bottom: 47px;
+}
+
+@media only screen and (max-width: 1105px) {
+  .site-hero__list {
+    margin-left: -50px;
+    margin-bottom: -45px;
+  }
+  .site-hero__item {
+    width: calc(100%/4 - 50px);
+    margin-left: 50px;
+    margin-bottom: 47px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .site-hero__list {
+    margin-left: -40px;
+    margin-bottom: -45px;
+  }
+  .site-hero__item {
+    width: calc(100%/4 - 40px);
+    margin-left: 40px;
+    margin-bottom: 47px;
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  .site-hero__list {
+    margin-left: -70px;
+    margin-bottom: -45px;
+  }
+  .site-hero__item {
+    width: calc(100%/3 - 70px);
+    margin-left: 70px;
+    margin-bottom: 47px;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .site-hero__list {
+    margin-left: -45px;
+    margin-bottom: -45px;
+  }
+  .site-hero__item {
+    width: calc(100%/3 - 45px);
+    margin-left: 45px;
+    margin-bottom: 47px;
+  }
+}
+
+@media only screen and (max-width: 755px) {
+  .site-hero__list {
+    margin-left: -12px;
+    margin-bottom: -12px;
+  }
+  .site-hero__item {
+    width: calc(100%/3 - 12px);
+    margin-left: 12px;
+    margin-bottom: 47px;
+  }
+}
+
+@media only screen and (max-width: 675px) {
+  .site-hero__list {
+    margin-left: -20px;
+    margin-bottom: -20px;
+  }
+  .site-hero__item {
+    width: calc(100%/2 - 20px);
+    margin-left: 20px;
+    margin-bottom: 47px;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .site-hero__list {
+    margin-left: 0;
+    margin-bottom: -20px;
+  }
+  .site-hero__item {
+    width: calc(100%);
+    margin-left: 0;
+    margin-bottom: 47px;
+  }
 }
 
 .site-form {
@@ -533,5 +663,93 @@ img {
 
 .site-form__select {
   padding: 19px 22px 19px 24px;
+}
+
+@media only screen and (max-width: 470px) {
+  .site-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .site-form__input-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 8px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .site-form__input {
+    padding-left: 45px;
+  }
+  .site-form__input-icon {
+    left: 12px;
+  }
+}
+
+.country {
+  overflow: hidden;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
+          box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
+  border-radius: 5px;
+}
+
+.country__header {
+  height: 160px;
+  overflow: hidden;
+}
+
+.country__flag {
+  display: block;
+  height: 100%;
+}
+
+.country__body {
+  padding-top: 24px;
+  padding-left: 24px;
+  padding-right: 5px;
+  padding-bottom: 46px;
+}
+
+.country__heading {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.country__txt {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.country__info {
+  font-weight: normal;
+}
+
+.country__capital-name {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 675px) {
+  .country__flag {
+    width: 100%;
+  }
+}
+
+.error-txt {
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 36px;
+  color: #bb0a0a;
 }
 /*# sourceMappingURL=main.css.map */

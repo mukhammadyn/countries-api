@@ -47,3 +47,30 @@
 .site-form__select {
   padding: 19px 22px 19px 24px;
 }
+
+@include breakpoint-down(470px) {
+
+  .site-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .site-form__input-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+  }
+
+}
+
+@include breakpoint-down(320px) {
+
+  .site-form__input {
+    padding-left: 45px;
+  }
+
+  .site-form__input-icon {
+    left: 12px;
+  }
+
+}

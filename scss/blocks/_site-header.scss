@@ -41,3 +41,40 @@
 .site-header__mode-img {
   margin-right: 10px;
 }
+
+
+
+@include breakpoint-down(470px) {
+
+  .site-header__heading {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+}
+
+@include breakpoint-down(350px) {
+
+  .site-header__heading {
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  .site-header__mode-btn {
+    font-size: 14px;
+  }
+
+}
+
+@include breakpoint-down(320px) {
+
+  .site-header__heading {
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  .site-header__mode-btn-txt {
+    display: none;
+  }
+
+}
