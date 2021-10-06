@@ -27,32 +27,59 @@
 
   <main class="site-main">
     <div class="container">
-      <form class="site-form" action="https:echo.htmlacademy.ru" method="GET">
+      <section class="site-hero">
+        <h2 class="visually-hidden">Countries</h2>
+        <form class="site-form js-site-form" action="https:echo.htmlacademy.ru" method="GET">
+          <div class="site-form__input-wrapper">
+            <span class="site-form__input-icon">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="search">
+                <path id="icon-search-black" fill-rule="evenodd" clip-rule="evenodd" d="M12.5 11H11.7L11.4 10.7C12.4 9.6 13 8.1 13 6.5C13 2.9 10.1 0 6.5 0C2.9 0 0 2.9 0 6.5C0 10.1 2.9 13 6.5 13C8.1 13 9.6 12.4 10.7 11.4L11 11.7V12.5L16 17.5L17.5 16L12.5 11ZM6.5 11C4 11 2 9 2 6.5C2 4 4 2 6.5 2C9 2 11 4 11 6.5C11 9 9 11 6.5 11Z" fill="currentColor"/>
+                </g>
+              </svg>
+            </span>
+            <input class="site-form__input site-form__inputs js-country-search" type="text" name="country" aria-label="country-input" placeholder="Search for a country…">
+          </div>
+          <select class="site-form__select site-form__inputs js-search-by-region" name="continents" aria-label="continents">
+            <option value="" selected disabled>Filter by Region</option>
+            <option value="Africa">Africa</option>
+            <option value="America">America</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+          </select>
+        </form>
 
-        <div class="site-form__input-wrapper">
-          <span class="site-form__input-icon">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g id="search">
-              <path id="icon-search-black" fill-rule="evenodd" clip-rule="evenodd" d="M12.5 11H11.7L11.4 10.7C12.4 9.6 13 8.1 13 6.5C13 2.9 10.1 0 6.5 0C2.9 0 0 2.9 0 6.5C0 10.1 2.9 13 6.5 13C8.1 13 9.6 12.4 10.7 11.4L11 11.7V12.5L16 17.5L17.5 16L12.5 11ZM6.5 11C4 11 2 9 2 6.5C2 4 4 2 6.5 2C9 2 11 4 11 6.5C11 9 9 11 6.5 11Z" fill="currentColor"/>
-              </g>
-            </svg>              
-          </span>
-          <input class="site-form__input site-form__inputs" type="text" name="country" aria-label="country-input" placeholder="Search for a country…">
-        </div>
-
-        <select class="site-form__select site-form__inputs" name="continents" aria-label="continents">
-          <option value="" selected disabled>Filter by Region</option>
-          <option value="Africa">Africa</option>
-          <option value="America">America</option>
-          <option value="Asia">Asia</option>
-          <option value="Europe">Europe</option>
-          <option value="Oceania">Oceania</option>
-        </select>
-
-      </form>
+        <ul class="site-hero__list">
+       
+        </ul>
+      </section> 
     </div>
   </main>
 
+<!-- template -->
+<template id="country-template">
+  <li class="site-hero__item country">
+    <header class="country__header">
+      <img class="country__flag" src="//unsplash.it/264/160" alt="flag" width="264" height="160">
+    </header>
 
+    <div class="country__body">
+      <h3 class="country__heading">Germany</h3>
+      <p class="country__population country__txt">
+        Population: <span class="country__population-count country__info">81,770,900</span>
+      </p>
+
+      <p class="country__region country__txt">
+        Region: <span class="country__region-place country__info">Europe</span>
+      </p>
+
+      <p class="country__capital country__txt">
+        Capital: <span class="country__capital-name country__info">Berlin</span>
+      </p>
+    </div>
+  </li>
+</template>
+<script src="js/main.js"></script>
 </body>
 </html>
