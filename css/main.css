@@ -411,6 +411,19 @@ img {
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
 }
 
+.site-header--dark-mode {
+  background-color: #2B3844;
+  color: #fff;
+}
+
+.site-header--dark-mode .site-header__mode-btn {
+  color: #fff;
+}
+
+.site-header--dark-mode .site-header__mode-btn-inner path {
+  stroke: #fff;
+}
+
 .site-header__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -433,7 +446,7 @@ img {
 .site-header__mode-btn {
   padding: 0;
   border: none;
-  background-color: #fff;
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -500,6 +513,12 @@ img {
       flex-wrap: wrap;
   margin-left: -75px;
   margin-bottom: -45px;
+}
+
+.site-hero__list--dark-mode
+.site-hero__item {
+  background-color: #2B3844;
+  color: #fff;
 }
 
 .site-hero__item {
@@ -605,6 +624,31 @@ img {
   padding-bottom: 48px;
 }
 
+.site-form--dark-mode .site-form__inputs {
+  background-color: #2B3844;
+  color: #fff;
+}
+
+.site-form--dark-mode .site-form__input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.site-form--dark-mode .site-form__input:-ms-input-placeholder {
+  color: #fff;
+}
+
+.site-form--dark-mode .site-form__input::-ms-input-placeholder {
+  color: #fff;
+}
+
+.site-form--dark-mode .site-form__input::placeholder {
+  color: #fff;
+}
+
+.site-form--dark-mode .site-form__input-icon path {
+  fill: #fff;
+}
+
 .site-form__input-wrapper {
   position: relative;
   z-index: 1;
@@ -659,6 +703,22 @@ img {
   padding-top: 19px;
   padding-bottom: 19px;
   padding-left: 74px;
+}
+
+.site-form__input::-webkit-input-placeholder {
+  color: #848484;
+}
+
+.site-form__input:-ms-input-placeholder {
+  color: #848484;
+}
+
+.site-form__input::-ms-input-placeholder {
+  color: #848484;
+}
+
+.site-form__input::placeholder {
+  color: #848484;
 }
 
 .site-form__select {
@@ -751,5 +811,9 @@ img {
   font-weight: bold;
   font-size: 36px;
   color: #bb0a0a;
+}
+
+.dark-mode {
+  background-color: #202C36;
 }
 /*# sourceMappingURL=main.css.map */

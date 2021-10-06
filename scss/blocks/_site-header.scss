@@ -5,6 +5,19 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
 }
 
+.site-header--dark-mode {
+  background-color: #2B3844;
+  color: #fff;
+}
+
+.site-header--dark-mode .site-header__mode-btn {
+  color: #fff;
+}
+
+.site-header--dark-mode .site-header__mode-btn-inner path {
+  stroke: #fff;
+}
+
 .site-header__container {
   display: flex;
   justify-content: space-between;
@@ -21,7 +34,7 @@
 .site-header__mode-btn {
   padding: 0;
   border: none;
-  background-color: #fff;
+  background-color: transparent;
   cursor: pointer;
 
   &:hover {

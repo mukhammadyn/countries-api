@@ -1,3 +1,18 @@
+// dark mode
+const elModeBtn = document.querySelector('.js-mode-toggler')
+const elSiteHeader = document.querySelector('.site-header')
+const elSiteForm = document.querySelector('.site-form')
+const elCountriesList = document.querySelector('.site-hero__list')
+
+if (elModeBtn) {
+  elModeBtn.addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode')
+    elSiteHeader.classList.toggle('site-header--dark-mode')
+    elSiteForm.classList.toggle('site-form--dark-mode')
+    elCountriesList.classList.toggle('site-hero__list--dark-mode')
+  })
+}
+
 // global
 const COUNTRIES_DATA = 'https://restcountries.com/v2'
 
@@ -6,9 +21,7 @@ const elSearchForm = document.querySelector('.js-site-form')
 const elSearchFormInput = elSearchForm.querySelector('.js-country-search')
 const elSearchFormSelect = elSearchForm.querySelector('.js-search-by-region')
 
-// countries list
-const elCountriesList = document.querySelector('.site-hero__list')
-
+// temp
 const elCountryTemplate = document.querySelector('#country-template').content
 
 function getJson(url, successFn, errorFn) {

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,21 @@
   <title>Countries</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
 
   <header class="site-header">
     <div class="site-header__container container">
       <h1 class="site-header__heading">Where in the world?</h1>
-      <button class="site-header__mode-btn">
+      <button class="site-header__mode-btn js-mode-toggler">
         <span class="site-header__mode-btn-inner">
           <span class="site-header__mode-img">
             <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5532 11.815C8.66857 11.815 5.51929 8.92783 5.51929 5.36821C5.51929 4.0253 5.96679 2.78158 6.73143 1.75C3.69036 2.69515 1.5 5.33122 1.5 8.43807C1.5 12.3385 4.94929 15.5 9.20357 15.5C12.5929 15.5 15.4696 13.4932 16.5 10.7045C15.375 11.4048 14.0161 11.815 12.5532 11.815Z" fill="white" stroke="#111517" stroke-width="1.25"/>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12.5532 11.815C8.66857 11.815 5.51929 8.92783 5.51929 5.36821C5.51929 4.0253 5.96679 2.78158 6.73143 1.75C3.69036 2.69515 1.5 5.33122 1.5 8.43807C1.5 12.3385 4.94929 15.5 9.20357 15.5C12.5929 15.5 15.4696 13.4932 16.5 10.7045C15.375 11.4048 14.0161 11.815 12.5532 11.815Z"
+                fill="white" stroke="#111517" stroke-width="1.25" />
             </svg>
-          </span>        
+          </span>
           <span class="site-header__mode-btn-txt">Dark Mode</span>
         </span>
       </button>
@@ -34,13 +38,18 @@
             <span class="site-form__input-icon">
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="search">
-                <path id="icon-search-black" fill-rule="evenodd" clip-rule="evenodd" d="M12.5 11H11.7L11.4 10.7C12.4 9.6 13 8.1 13 6.5C13 2.9 10.1 0 6.5 0C2.9 0 0 2.9 0 6.5C0 10.1 2.9 13 6.5 13C8.1 13 9.6 12.4 10.7 11.4L11 11.7V12.5L16 17.5L17.5 16L12.5 11ZM6.5 11C4 11 2 9 2 6.5C2 4 4 2 6.5 2C9 2 11 4 11 6.5C11 9 9 11 6.5 11Z" fill="currentColor"/>
+                  <path id="icon-search-black" fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12.5 11H11.7L11.4 10.7C12.4 9.6 13 8.1 13 6.5C13 2.9 10.1 0 6.5 0C2.9 0 0 2.9 0 6.5C0 10.1 2.9 13 6.5 13C8.1 13 9.6 12.4 10.7 11.4L11 11.7V12.5L16 17.5L17.5 16L12.5 11ZM6.5 11C4 11 2 9 2 6.5C2 4 4 2 6.5 2C9 2 11 4 11 6.5C11 9 9 11 6.5 11Z"
+                    fill="currentColor" />
                 </g>
               </svg>
             </span>
-            <input class="site-form__input site-form__inputs js-country-search" type="text" name="country" aria-label="country-input" placeholder="Search for a country…">
+            <input class="site-form__input site-form__inputs js-country-search" type="text"
+              name="country" aria-label="country-input" placeholder="Search for a country…">
           </div>
-          <select class="site-form__select site-form__inputs js-search-by-region" name="continents" aria-label="continents">
+          <select
+            class="site-form__select site-form__select--dark-mode site-form__inputs js-search-by-region"
+            name="continents" aria-label="continents">
             <option value="" selected disabled>Filter by Region</option>
             <option value="Africa">Africa</option>
             <option value="America">America</option>
@@ -51,35 +60,36 @@
         </form>
 
         <ul class="site-hero__list">
-       
+
         </ul>
-      </section> 
+      </section>
     </div>
   </main>
 
-<!-- template -->
-<template id="country-template">
-  <li class="site-hero__item country">
-    <header class="country__header">
-      <img class="country__flag" src="//unsplash.it/264/160" alt="flag" width="264" height="160">
-    </header>
+  <!-- template -->
+  <template id="country-template">
+    <li class="site-hero__item country">
+      <header class="country__header">
+        <img class="country__flag" src="//unsplash.it/264/160" alt="flag" width="264" height="160">
+      </header>
 
-    <div class="country__body">
-      <h3 class="country__heading">Germany</h3>
-      <p class="country__population country__txt">
-        Population: <span class="country__population-count country__info">81,770,900</span>
-      </p>
+      <div class="country__body">
+        <h3 class="country__heading">Germany</h3>
+        <p class="country__population country__txt">
+          Population: <span class="country__population-count country__info">81,770,900</span>
+        </p>
 
-      <p class="country__region country__txt">
-        Region: <span class="country__region-place country__info">Europe</span>
-      </p>
+        <p class="country__region country__txt">
+          Region: <span class="country__region-place country__info">Europe</span>
+        </p>
 
-      <p class="country__capital country__txt">
-        Capital: <span class="country__capital-name country__info">Berlin</span>
-      </p>
-    </div>
-  </li>
-</template>
-<script src="js/main.js"></script>
+        <p class="country__capital country__txt">
+          Capital: <span class="country__capital-name country__info">Berlin</span>
+        </p>
+      </div>
+    </li>
+  </template>
+  <script src="js/main.js"></script>
 </body>
+
 </html>

@@ -5,6 +5,22 @@
   padding-bottom: 48px;
 }
 
+.site-form--dark-mode .site-form__inputs {
+  background-color: #2B3844;
+  color: #fff;
+}
+
+.site-form--dark-mode .site-form__input {
+
+  &::placeholder {
+    color: #fff;
+  }
+}
+
+.site-form--dark-mode .site-form__input-icon path {
+  fill: #fff;
+}
+
 .site-form__input-wrapper {
   position: relative;
   z-index: 1;
@@ -42,6 +58,10 @@
   padding-top: 19px;
   padding-bottom: 19px;
   padding-left: 74px;
+
+  &::placeholder {
+    color: #848484;
+  }
 }
 
 .site-form__select {

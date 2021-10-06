@@ -6,6 +6,12 @@
   margin-bottom: -45px;
 }
 
+.site-hero__list--dark-mode 
+.site-hero__item {
+  background-color: #2B3844;
+  color: #fff;
+}
+
 .site-hero__item {
   width: calc(100%/4 - 75px);
   margin-left: 75px;
