@@ -1,17 +1,12 @@
 // dark mode
 const elModeBtn = document.querySelector('.js-mode-toggler')
 const elSiteHeader = document.querySelector('.site-header')
-const elSiteForm = document.querySelector('.site-form')
 const elCountriesList = document.querySelector('.site-hero__list')
 
-if (elModeBtn) {
-  elModeBtn.addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode')
-    elSiteHeader.classList.toggle('site-header--dark-mode')
-    elSiteForm.classList.toggle('site-form--dark-mode')
-    elCountriesList.classList.toggle('site-hero__list--dark-mode')
-  })
-}
+const elSiteForm = document.querySelector('.site-form')
+const elSiteFormSearch = elSiteForm.querySelector('.js-country-search')
+const elSiteFormFilterRegion = elSiteForm.querySelector('.js-search-by-region')
+
 
 // global
 const COUNTRIES_DATA = 'https://restcountries.com/v2'
@@ -36,12 +31,8 @@ function getJson(url, successFn, errorFn) {
   })
 }
 
-function showCountries(data) {
-  showCountries(data)
-}
-
-function errorFn() {
-  elMoviesList.innerHTML = `<span class="error-txt">Country not found</span>`
+function errorFn () {
+  elCountriesList.innerHTML = `<span class="error-txt">Country not found</span>`
 }
 
 function showCountries(data) {
@@ -63,12 +54,32 @@ function showCountries(data) {
 
 }
 
-function showAllCountries() {
+function showAllCountries () {
   getJson(COUNTRIES_DATA + '/all', showCountries, errorFn)
 }
 
-if (elSearchForm) {
+function showSearchedCountry (evt) {
+  evt.preventDefault()
+  if (elSiteFormSearch.value == '') {
+    showAllCountries()
+  } else {
+    elCountriesList.innerHTML = ''
+    getJson(COUNTRIES_DATA + '/name/' + elSiteFormSearch.value, showCountries, errorFn)
+  }
 
+}
+
+if (elModeBtn) {
+  elModeBtn.addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode')
+    elSiteHeader.classList.toggle('site-header--dark-mode')
+    elSiteForm.classList.toggle('site-form--dark-mode')
+    elCountriesList.classList.toggle('site-hero__list--dark-mode')
+  })
+}
+
+if (elSiteForm) {
+  elSiteForm.addEventListener('submit', showSearchedCountry)
 }
 
 showAllCountries()
