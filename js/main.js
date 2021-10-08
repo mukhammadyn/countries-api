@@ -65,8 +65,14 @@ function showSearchedCountry (evt) {
   } else {
     elCountriesList.innerHTML = ''
     getJson(COUNTRIES_DATA + '/name/' + elSiteFormSearch.value, showCountries, errorFn)
+    elSearchFormSelect.value = ''
   }
 
+}
+
+function sortByRegion () {
+  elCountriesList.innerHTML = ''
+  getJson(COUNTRIES_DATA + '/continent/' + elSearchFormSelect.value, showCountries, errorFn)
 }
 
 if (elModeBtn) {
@@ -80,6 +86,10 @@ if (elModeBtn) {
 
 if (elSiteForm) {
   elSiteForm.addEventListener('submit', showSearchedCountry)
+}
+
+if (elSiteFormFilterRegion) {
+  elSiteFormFilterRegion.addEventListener('change', sortByRegion)
 }
 
 showAllCountries()
